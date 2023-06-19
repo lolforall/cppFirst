@@ -1,9 +1,12 @@
+// Директивы препроцессора
 #include <iostream>
 #include <cmath>
 #include <string>
 
+// Задал поле именования
 using namespace std;
 
+// Создал класс прямоугольника и задал методы для вычисления периметра, площади и длины диагонали
 class Rectangle {
 private:
     double width, length;
@@ -24,16 +27,21 @@ public:
     }
 };
 
+// Вызов
 int main() {
     setlocale(LC_ALL, "RUS");
+    
+    // Переменные для хранения данных от пользователя
     double someLength, someWidth;
 
+    // Запросы и запись данных из консоли
     cout << "Введите длину прямоугольника: ";
     cin >> someLength;
 
     cout << "Введите ширину прямоугольника: ";
     cin >> someWidth;
 
+    // Создание класса some и вызов методов с данными пользователя
     Rectangle some(someLength, someWidth);
 
     cout << "Периметр вашего прямоугольника равен: " << some.perimeter() << endl;
